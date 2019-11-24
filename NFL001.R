@@ -40,7 +40,8 @@ names(scores)[names(scores) == "Weather Detail"] <- "weather_detail"
 
 
 
-### Subset data, betting data not complete until 1980 ###
+### Subset data, betting data not complete until 1990, 2019 shedule included but no data ###
+###We could use data as early as 1980 if we can figure out how to get over/ under issue worked out###
 scores<- subset(scores, Season >= 1990 & Season <= 2018)
 
 ### Creating a cloropleth map of all NFL stadiums ###
