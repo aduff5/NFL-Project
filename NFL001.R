@@ -41,7 +41,7 @@ names(scores)[names(scores) == "Weather Detail"] <- "weather_detail"
 
 
 ### Subset data, betting data not complete until 1980 ###
-scores<- subset(scores, Season >= 1980)
+scores<- subset(scores, Season >= 1990 & Season <= 2018)
 
 ### Creating a cloropleth map of all NFL stadiums ###
 
@@ -63,9 +63,6 @@ for (i in 1:nrow(scores)) {
   }
   if (scores$combined_score[i] == scores$over_under_line[i]) {
     scores$over_under_hit[i]<- c("push")
-  }
-  if(is.na(scores$over_under_line == TRUE)){
-    scores$over_under_hit<- NA
   }
 }
 
